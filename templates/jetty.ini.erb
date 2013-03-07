@@ -1,0 +1,17 @@
+# HEADER: this file is managed by puppet
+
+[jetty]
+# Hostname to list for clear-text HTTP.  Default is localhost
+<% if @host %>
+host = <%= host %>
+<% end %>
+# Port to listen on for clear-text HTTP.
+port = 8080
+ssl-host = <%= host %>
+ssl-port = 8081
+keystore = /etc/puppetdb/ssl/keystore.jks
+truststore = /etc/puppetdb/ssl/truststore.jks
+key-password = tI2aoKrmfgpbGfkJTpNxh1gL1
+trust-password = tI2aoKrmfgpbGfkJTpNxh1gL1
+
+
